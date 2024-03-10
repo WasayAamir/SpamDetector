@@ -1,45 +1,102 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!-- The main HTML document for the Spam Detector Dashboard -->
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
+  <!-- Metadata and styling for the HTML document -->
+  <meta charset="UTF-8">
+  <title>Spam Detector</title>
+  <style>
+    /* Styling for the body element */
+    body {
+      background-color: #E3E2DF;
+    }
+  </style>
+  <!-- External stylesheets for normalization and main styling -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <!-- Meta tags for description, viewport, and theme color -->
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="index-background"> <!-- Apply a specific class to the body for styling -->
 
-  <!-- Add your site or application content here -->
+<!-- Top bar with Sidebar Toggle -->
+<div class="top-bar">
+  <!-- Sidebar toggle button -->
+  <span class="sidebar-toggle" onclick="toggleNav()">&#9776;</span>
+  <!-- Heading for the Spam Detector Dashboard -->
+  <h1>Spam Detector Dashboard</h1>
+</div>
 
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <!-- Sidebar links -->
+  <a href="index.html">Dashboard</a>
+  <a href="about.html">About</a>
+  <!-- Additional sidebar links can be added as needed -->
+</div>
 
+<!-- Main content -->
+<div id="main" class="content">
+  <!-- Dashboard heading -->
+  <h1 class="dashboard-heading">Spam Analysis Dashboard</h1>
+  <!-- Container for the table -->
+  <div class="table-container">
+    <!-- Table for displaying spam analysis results -->
+    <table id="spamTable">
+      <thead>
+      <!-- Table header with column names -->
+      <tr>
+        <th>File Name</th>
+        <th>Spam Probability</th>
+        <th>Actual Class</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Table rows will be populated dynamically -->
+      </tbody>
+    </table>
+  </div> <!-- Close the table-container div -->
 
+  <!-- Performance metrics section -->
+  <div id="Performance">
+    <!-- Heading for model performance -->
+    <h2>Model Performance</h2>
+    <!-- Placeholder for model performance details -->
+    <p id="mp"></p>
+  </div>
 
+  <!-- Precision metrics section -->
+  <div id="Precision">
+    <!-- Heading for precision -->
+    <h2>Precision</h2>
+    <!-- Placeholder for precision value -->
+    <p id="precisionValue"></p>
+  </div>
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Accuracy metrics section -->
+  <div id="Accuracy">
+    <!-- Heading for accuracy -->
+    <h2>Accuracy</h2>
+    <!-- Placeholder for accuracy value -->
+    <p id="accuracyValue"></p>
+  </div>
+</div>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+<!-- Bottom bar with copyright information -->
+<div class="bottom-bar">
+  <p> Copyright &copy; CSCI 2020U - Winter 2024</p>
+</div>
+
+<!-- JavaScript scripts for functionality -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 
 </html>

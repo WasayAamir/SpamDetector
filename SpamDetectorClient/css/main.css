@@ -173,9 +173,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -189,7 +189,7 @@ textarea {
   *,
   *::before,
   *::after {
-    background: #fff !important;
+    background: #000000 !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
@@ -253,4 +253,310 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* CSS for the top bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #101010;
+  color: #E3E2DF;
+  padding: 10px;
+  text-align: center;
+  z-index: 2;
+}
 
+/* CSS for the sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.1s;
+}
+
+/* Added style for the closed sidebar */
+.sidebar:not(.open) {
+  transform: translateY(100px);
+  background-color: #101010;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #282828;
+}
+
+/* Style page content */
+
+/* Style for the content */
+.content {
+  padding-bottom: 60px;
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center-align content */
+}
+
+
+/* CSS for the bottom bar */
+.bottom-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #101010;
+  color: #E3E2DF;
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* CSS to push the footer to the bottom of the page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding-bottom: 60px;
+}
+
+/* CSS for the sidebar toggle button */
+.sidebar-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #101010;
+  color: #E3E2DF;
+  padding: 30px 20px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3; /* Ensure it's above other elements */
+}
+
+.sidebar-toggle:hover {
+  background-color: #303030;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 150px;
+}
+/* CSS for the table */
+#spamTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+#spamTable th, #spamTable td {
+  border: 1px solid #ffffff;
+  padding: 8px;
+  text-align: left;
+}
+
+#spamTable th {
+  background-color: #101010;
+  color: #E3E2DF;
+}
+
+#spamTable tbody tr:hover {
+  background-color: #000fff;
+}
+#spamTable tbody{
+  max-height: 300px;
+  overflow-y: scroll;
+  color: white;
+}
+/* CSS for the content */
+.content {
+  padding-bottom: 60px;
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center-align content */
+  position: relative; /* Ensure precisionAccuracy div is positioned relative to the main content */
+}
+
+/* Style for the table container */
+.table-container {
+  max-height: 900px; /* Set the maximum height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* CSS for the About page background image */
+.about-background {
+  background-image: url('abstract-square-blinds-oscillation-background-3d-walls-wavy-surface-geometric-elements-displacement.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+}
+
+.index-background{
+  background-image: url('abstract-square-blinds-oscillation-background-3d-walls-wavy-surface-geometric-elements-displacement.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* CSS for the main content in Dashboard page */
+.dashboard-heading {
+  color: #E3E2DF; /* Replace with your desired color code or name */
+}
+
+/* Additional styling for the dashboard heading, if needed */
+.dashboard-heading {
+  font-size: 36px;
+  font-weight: bold;
+  /* Add any other styling properties as needed */
+}
+
+/* CSS for the main content in About page */
+.about-content {
+  text-align: center;
+}
+
+.about-content .section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-content .person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-content .name {
+  font-size: 24px;
+  font-family: 'YourDesiredFont', sans-serif; /* Replace 'YourDesiredFont' with the desired font-family */
+  margin-bottom: 5px;
+  -webkit-text-stroke: .5px white; /* White outline */
+  padding: 5px; /* Add padding for better appearance */
+}
+
+.about-content .github-link img {
+  width: 20px; /* Adjust the width of the GitHub logo as needed */
+  height: auto;
+}
+
+/* Optional: Add styles for the GitHub logo hover effect */
+.about-content .github-link:hover img {
+  filter: brightness(120%); /* Adjust brightness on hover */
+}
+/* CSS for the team members on the About page */
+.about-background .content .section-title {
+  -webkit-text-stroke: 0.5px #ffffff; /* WebKit browsers (Safari, Chrome) */
+  font-size: 30px;
+  color: transparent; /* Make the text transparent to show only the stroke */
+}
+
+.about-background .content .person-info {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.about-background .content .person-info .github-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.about-background .content .person-info h2 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.about-background .content .person-info .github-link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.about-background .content .person-info .github-link img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+/* CSS for Precision and Accuracy */
+#Accuracy {
+  position: fixed;
+  top: 45%;
+  right: 60px;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background */
+  color: #ffffff;
+  border-radius: 5px; /* Add some rounded corners */
+}
+
+#Accuracy h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#Accuracy p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+/* CSS for Precision and Accuracy */
+#Precision {
+  position: fixed;
+  top: 65%;
+  right: 60px;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.84); /* Add a semi-transparent background */
+  color: #ffffff;
+  border-radius: 5px; /* Add some rounded corners */
+}
+#Precision h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#Precision p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+#Accuracy:hover,
+#Precision:hover {
+  background-color: #313131; /* Darken the background on hover */
+}
+
+/* CSS for Precision and Accuracy */
+#Performance {
+  position: fixed;
+  top: 35%;
+  right: 60px;  /* Adjust the right value based on your preference */
+  transform: translateY(-50%);
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 5px; /* Add some rounded corners */
+}
+
+#Performance h2 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+#Performance p {
+  font-size: 16px;
+  margin: 5px 0;
+}
