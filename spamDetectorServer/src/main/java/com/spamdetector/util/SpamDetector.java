@@ -156,7 +156,7 @@ public class SpamDetector {
         return (double) (numTruePositive + numTrueNegative) / totalFiles;
     }
 
-    // Method to calculate average spam probability across test files
+    //Method to calculate average spam probability across test files
     public double calculateAverageSpamProbability() {
         double totalSpamProbability = 0.0;
         int numTestFiles = testFiles.size();
