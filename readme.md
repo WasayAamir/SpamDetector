@@ -3,6 +3,14 @@
 ## Project Information
 This project aims to create a spam detector using a unigram approach to filter out spam emails. The program uses a dataset of emails (spam or ham) to train the system, calculating probabilities based on each word's frequency.
 
+### Screenshots
+
+#### Dashboard
+![Dashboard](Dashboard.png)
+
+#### About Me Page
+![About Me Page](screenshots/about_me_page.png)
+
 ### Group Members
 - [Your Name]
 - [Group Member 2 Name]
