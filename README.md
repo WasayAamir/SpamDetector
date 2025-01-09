@@ -1,4 +1,3 @@
-# 📧 Assignment 01 - Spam Detector
 🖥 Course: CSCI 2020U - Software Systems Development and Integration
 
 This is a template for your Assignment 01 project. The goal is to build a spam detector to filter out unwanted emails! 🧹✉️
